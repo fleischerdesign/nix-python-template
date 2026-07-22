@@ -2,7 +2,7 @@
   description = "A reproducible Python development environment with modern tooling.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
@@ -36,6 +36,8 @@
             echo "Available tools: python, uv, ruff, pyright"
           '';
         };
+
+        formatter = pkgs.nixfmt-rfc-style;
       }
     );
 }
